@@ -1,22 +1,25 @@
-package model.product;
+package model.product.contents;
 
 public abstract class Product {
     private String id;
     private String name;
     private double unitPrice;
-    private int amount;
+    private int stockAmount;
+
+    private int buyAmount;
 
     public Product() {
     }
 
-    public Product(String id, String name, double unitPrice) {
+    public Product(String id, String name, double unitPrice, int stockAmount) {
         this.id = id;
         this.name = name;
         this.unitPrice = unitPrice;
+        this.stockAmount = stockAmount;
     }
 
     public Product(int amount) {
-        this.amount = amount;
+        this.stockAmount = amount;
     }
 
     public String getId() {
@@ -43,12 +46,20 @@ public abstract class Product {
         this.unitPrice = unitPrice;
     }
 
-    public int getAmount() {
-        return amount;
+    public int getBuyAmount() {
+        return buyAmount;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setBuyAmount(int buyAmount) {
+        this.buyAmount = buyAmount;
+    }
+
+    public int getStockAmount() {
+        return stockAmount;
+    }
+
+    public void setStockAmount(int stockAmount) {
+        this.stockAmount = stockAmount;
     }
 
     public abstract double getPrice(int amount);
@@ -59,6 +70,8 @@ public abstract class Product {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", unitPrice=" + unitPrice +
+                ", stockAmount=" + stockAmount +
                 '}';
     }
 }
+

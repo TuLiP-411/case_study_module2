@@ -1,12 +1,17 @@
 package controller;
 
-import model.product.Product;
+import model.product.contents.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StockManager {
-    public static List<Product> listProduct = new ArrayList<Product>();
+    public static List<Product> listProduct = new ArrayList<>();
+//    Product p1 = FactoryProduct.getProduct("M001","Thit ba chi",60000, 350);
+//    Product p2 = FactoryProduct.getProduct("V001","Rau bap cai",15000, 200);
+//    Product p3 = FactoryProduct.getProduct("S001","Ngu vi huong",2000,150);
+//    Product p4 = FactoryProduct.getProduct("S002","Bot canh hao hao",5000,150);
+//
 
     public static void addProduct(Product p) {
         listProduct.add(p);

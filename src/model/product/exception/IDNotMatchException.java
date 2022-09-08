@@ -1,4 +1,4 @@
-package model.product;
+package model.product.exception;
 
 public class IDNotMatchException extends RuntimeException{
     public IDNotMatchException(String mes) {
