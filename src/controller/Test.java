@@ -18,7 +18,7 @@ public class Test {
             Product p3 = FactoryProduct.getProduct("S001", "Ngu vi huong", 2000, 150);
             Product p4 = FactoryProduct.getProduct("S002", "Bot canh hao hao", 5000, 150);
             ((Meat) p1).setManufactureDate(LocalDate.now());
-            ((Vegetable) p2).setManufactureDate(LocalDate.of(2022, 9, 6));
+            ((Vegetable) p2).setManufactureDate(LocalDate.of(2022, 9, 9));
             stockList.addProduct(p1);
             stockList.addProduct(p2);
             stockList.addProduct(p3);
@@ -31,8 +31,6 @@ public class Test {
             cartManager.addByID("S002", 100);
 
             cartManager.displayCart();
-            System.out.println();
-            stockList.displayListProduct();
 
         } catch (IDNotMatchException e) {
             System.out.println(e);

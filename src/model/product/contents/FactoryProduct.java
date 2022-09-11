@@ -2,10 +2,11 @@ package model.product.contents;
 
 import model.product.exception.IDNotMatchException;
 
+import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class FactoryProduct {
+public class FactoryProduct implements Serializable {
     private static final String ID_MEAT_REGEX = "^M[0-9]{3}$";
     private static final String ID_VEGETABLE_REGEX = "^V[0-9]{3}$";
     private static final String ID_SPICE_REGEX = "^S[0-9]{3}$";

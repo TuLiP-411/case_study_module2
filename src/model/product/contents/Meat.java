@@ -4,16 +4,17 @@ import model.product.exception.ExpiredProductException;
 import model.product.interfaces.IDiscount;
 import model.product.interfaces.IExpire;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Meat extends Product implements IExpire, IDiscount {
+public class Meat extends Product implements IExpire, IDiscount, Serializable {
     private LocalDate manufactureDate;
 
 
-    public Meat() {
+    protected Meat() {
     }
 
-    public Meat(String id, String name, double unitPrice, int stockAmount, LocalDate manufactureDate) {
+    protected Meat(String id, String name, double unitPrice, int stockAmount, LocalDate manufactureDate) {
         super(id, name, unitPrice, stockAmount);
         this.manufactureDate = manufactureDate;
     }

@@ -1,11 +1,14 @@
 package controller;
 
 import model.product.contents.Product;
+import storage.product.IReadWriteData;
+import storage.product.ReadWriteText;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StockManager {
+    private static IReadWriteData readFile = ReadWriteText.getInstance();
     public static List<Product> listProduct = new ArrayList<>();
 //    Product p1 = FactoryProduct.getProduct("M001","Thit ba chi",60000, 350);
 //    Product p2 = FactoryProduct.getProduct("V001","Rau bap cai",15000, 200);

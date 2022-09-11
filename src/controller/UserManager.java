@@ -1,12 +1,14 @@
 package controller;
 
-import model.product.contents.Product;
 import model.user.User;
+import storage.product.IReadWriteData;
+import storage.product.ReadWriteText;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserManager {
+    private static IReadWriteData readFile = ReadWriteText.getInstance();
     public static List<User> listUser = new ArrayList<>();
 
     public static void addUser(User u) {
@@ -32,14 +34,14 @@ public class UserManager {
         }
     }
 
-    public static void displayListProduct() {
+    public static void displayListUser() {
         for (User u : listUser
         ) {
             System.out.println(u.toString());
         }
     }
 
-    public static User searchByName(String name) {
+    public static User searchUserByName(String name) {
         User result = null;
         for (User u : listUser
         ) {
@@ -50,7 +52,7 @@ public class UserManager {
         return result;
     }
 
-    public static User searchByPhoneNumber(String phoneNumber) {
+    public static User searchUserByPhoneNumber(String phoneNumber) {
         User result = null;
         for (User u : listUser
         ) {

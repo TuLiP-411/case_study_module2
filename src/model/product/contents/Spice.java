@@ -1,10 +1,12 @@
 package model.product.contents;
 
-public class Spice extends Product {
-    public Spice() {
+import java.io.Serializable;
+
+public class Spice extends Product implements Serializable {
+    protected Spice() {
     }
 
-    public Spice(String id, String name, double unitPrice, int stockAmount) {
+    protected Spice(String id, String name, double unitPrice, int stockAmount) {
         super(id, name, unitPrice, stockAmount);
     }
 

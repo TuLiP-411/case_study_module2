@@ -1,6 +1,8 @@
 package model.product.contents;
 
-public abstract class Product {
+import java.io.Serializable;
+
+public abstract class Product implements Serializable {
     private String id;
     private String name;
     private double unitPrice;
