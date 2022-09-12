@@ -22,7 +22,7 @@ public class ReadWriteText implements IReadWriteData {
     }
 
     @Override
-    public void writeData(List<Product> materials) {
+    public void writeData(List<Product> cart) {
 
     }
 }
