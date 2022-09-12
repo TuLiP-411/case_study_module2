@@ -9,7 +9,11 @@ public class Client {
     public static void main(String[] args) {
         final String RESET = "\033[0m";  // Text Reset
         final String RED_BOLD = "\033[1;31m";    // RED
-        System.out.println(RED_BOLD + "$$$$===>WELCOME TO TU lINH GROCERY MART<===$$$$" +
+        System.out.println(RED_BOLD  +
+                "╔══╗\n" +
+                "╚╗╔╝\n" +
+                "╔╝(¯`v´¯)\n" +
+                "╚══`.¸.[$$$ WELCOME TO TU lINH GROCERY MART $$$]\n" +
                 RESET);
         Client.mainMenuPrint();
     }

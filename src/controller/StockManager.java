@@ -48,9 +48,9 @@ public class StockManager {
         ((Vegetable) v5).setManufactureDate(LocalDate.now());
         Product s1 = FactoryProduct.getProduct("S001", "Ngu vi huong", 2000, 150);
         Product s2 = FactoryProduct.getProduct("S002", "Bot canh hao hao", 5000, 150);
-        Product s3 = FactoryProduct.getProduct("S002", "Nuoc nam Nam Ngu", 23000, 100);
-        Product s4 = FactoryProduct.getProduct("S002", "Dau hao", 17000, 150);
-        Product s5 = FactoryProduct.getProduct("S002", "Bot nem Ajingon", 32000, 100);
+        Product s3 = FactoryProduct.getProduct("S003", "Nuoc nam Nam Ngu", 23000, 100);
+        Product s4 = FactoryProduct.getProduct("S004", "Dau hao", 17000, 150);
+        Product s5 = FactoryProduct.getProduct("S005", "Bot nem Ajingon", 32000, 100);
 
         listProduct.add(m1);
         listProduct.add(m2);
@@ -125,7 +125,7 @@ public class StockManager {
         Product result = null;
         for (Product p : listProduct
         ) {
-            if (p.getName().equals(id)) {
+            if (p.getId().equals(id)) {
                 result = p;
             }
         }
