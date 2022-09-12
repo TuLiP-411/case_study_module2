@@ -50,6 +50,7 @@ public class CartMain {
                         String phoneNumber = scanner.nextLine();
                         cartList.addRewardPoint(phoneNumber);
                         cartList.getPayment();
+                        cartList.clearCart();
                         try {
                             Thread.sleep(500);
                         } catch (InterruptedException e) {

@@ -84,6 +84,10 @@ public class CartManager {
         }
     }
 
+    public static void clearCart() {
+        listCart.clear();
+    }
+
     public static double getTotal() {
         double sum = 0;
         for (Product p : listCart
@@ -106,7 +110,7 @@ public class CartManager {
         for (User u : listUser
         ) {
             if (u.getPhoneNumber().equals(phoneNumber)) {
-                u.addPoint(calculateRewardPoint());
+                u.setRewardPoint(u.addPoint(calculateRewardPoint()));
             }
         }
     }
