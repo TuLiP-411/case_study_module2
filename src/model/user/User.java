@@ -8,10 +8,10 @@ public class User {
     public User() {
     }
 
-    public User(String name, String phoneNumber, int rewardPoint) {
+    public User(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.rewardPoint = rewardPoint;
+        this.rewardPoint = 0;
     }
 
     public String getName() {

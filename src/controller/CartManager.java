@@ -56,6 +56,7 @@ public class CartManager {
         }
         System.out.printf("-------------------------------------------------------------------------%n");
         System.out.printf("| %56s | %-10s |%n", "TOTAL:", getTotal());
+        System.out.printf("| %56s | %-10s |%n", "REWARD POINT:", calculateRewardPoint());
         System.out.printf("-------------------------------------------------------------------------%n");
     }
 

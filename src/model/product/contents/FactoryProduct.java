@@ -38,7 +38,7 @@ public class FactoryProduct implements Serializable {
         } else if (validateSpice(id)) {
             product = new Spice();
         } else {
-            throw new IDNotMatchException("The ID you have entered is invalid");
+            throw new IDNotMatchException("The ID you have entered is invalid!");
         }
         product.setName(name);
         product.setId(id);
