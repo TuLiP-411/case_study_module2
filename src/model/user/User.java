@@ -8,6 +8,12 @@ public class User {
     public User() {
     }
 
+    public User(String name, String phoneNumber, int rewardPoint) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.rewardPoint = rewardPoint;
+    }
+
     public User(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;

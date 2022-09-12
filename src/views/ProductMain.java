@@ -4,9 +4,12 @@ package views;
 
 import controller.StockManager;
 import model.product.contents.FactoryProduct;
+import model.product.contents.Meat;
 import model.product.contents.Product;
+import model.product.contents.Vegetable;
 import model.product.exception.IDNotMatchException;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class ProductMain {
@@ -21,6 +24,30 @@ public class ProductMain {
                 switch (choice) {
                     case 1:
                         Product product = getProduct();
+                        if (product instanceof Meat) {
+                            System.out.println("Input manufacture year:");
+                            scanner = new Scanner(System.in);
+                            int year = scanner.nextInt();
+                            System.out.println("Input manufacture month:");
+                            scanner = new Scanner(System.in);
+                            int month = scanner.nextInt();
+                            System.out.println("Input manufacture day:");
+                            scanner = new Scanner(System.in);
+                            int day = scanner.nextInt();
+                            ((Meat) product).setManufactureDate(LocalDate.of(year, month, day));
+                        }
+                        if (product instanceof Vegetable) {
+                            System.out.println("Input manufacture year:");
+                            scanner = new Scanner(System.in);
+                            int year = scanner.nextInt();
+                            System.out.println("Input manufacture month:");
+                            scanner = new Scanner(System.in);
+                            int month = scanner.nextInt();
+                            System.out.println("Input manufacture day:");
+                            scanner = new Scanner(System.in);
+                            int day = scanner.nextInt();
+                            ((Vegetable) product).setManufactureDate(LocalDate.of(year, month, day));
+                        }
                         productList.addProduct(product);
                         try {
                             Thread.sleep(500);
@@ -36,7 +63,7 @@ public class ProductMain {
                         System.out.println("Input new product name: ");
                         scanner = new Scanner(System.in);
                         String name = scanner.nextLine();
-                        System.out.println("Input new product price: ");
+                        System.out.println("Input new product price/unit: ");
                         scanner = new Scanner(System.in);
                         double price = scanner.nextDouble();
                         productList.editProduct(id, name, price);
@@ -105,7 +132,7 @@ public class ProductMain {
             System.out.println("Input product name: ");
             scanner = new Scanner(System.in);
             String name = scanner.nextLine();
-            System.out.println("Input product price: ");
+            System.out.println("Input product price/unit: ");
             scanner = new Scanner(System.in);
             double price = scanner.nextDouble();
             System.out.println("Input product stock amount: ");

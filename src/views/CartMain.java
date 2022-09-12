@@ -44,6 +44,18 @@ public class CartMain {
                             throw new RuntimeException(e);
                         }
                         break;
+                    case 3:
+                        System.out.println("Input user phone number to gain reward point: ");
+                        scanner = new Scanner(System.in);
+                        String phoneNumber = scanner.nextLine();
+                        cartList.addRewardPoint(phoneNumber);
+                        cartList.getPayment();
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        break;
                     case 0:
                         Client.mainMenuPrint();
                     default:
@@ -61,6 +73,7 @@ public class CartMain {
         System.out.println("╠=============================================╣");
         System.out.println("║<> [1]. Add product to cart                  ║");
         System.out.println("║<> [2]. Remove product from cart (by id)     ║");
+        System.out.println("║<> [3]. Get payment                          ║");
         System.out.println("║<> [0]. Back to main menu                    ║");
         System.out.println("╚=============================================╝");
     }

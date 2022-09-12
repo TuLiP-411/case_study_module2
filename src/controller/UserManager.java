@@ -11,6 +11,13 @@ public class UserManager {
     private static IReadWriteData readFile = ReadWriteText.getInstance();
     public static List<User> listUser = new ArrayList<>();
 
+    static {
+        User u1 = new User("Luong", "0915814526", 15);
+        User u2 = new User("Linh", "0388205097", 20);
+        listUser.add(u1);
+        listUser.add(u2);
+    }
+
     public static void addUser(User u) {
         listUser.add(u);
     }

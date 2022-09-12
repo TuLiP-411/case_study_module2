@@ -38,6 +38,22 @@ public class CartManager {
     }
 
     public static void displayCart() {
+        System.out.printf("---------------------------- SHOPPING CART ------------------------------%n");
+        System.out.printf("| %-20s | %-10s | %-7s | %-10s | %-10s |%n", "PRODUCT", "PRICE/UNIT", "AMOUNT", "DISCOUNT", "PRICE");
+        System.out.printf("-------------------------------------------------------------------------%n");
+
+        for (Product p : listCart
+        ) {
+            if (p instanceof Meat || p instanceof Vegetable) {
+                System.out.printf("| %-20s | %-10s | %-7s | %-10s | %-10s |%n", p.getName(), p.getUnitPrice(), p.getBuyAmount(), ((IDiscount) p).getDiscount(p.getBuyAmount()), ((IDiscount) p).getRealMoney(p.getBuyAmount()));
+            } else {
+                System.out.printf("| %-20s | %-10s | %-7s | %-10s | %-10s |%n", p.getName(), p.getUnitPrice(), p.getBuyAmount(), "0.0", p.getPrice(p.getBuyAmount()));
+            }
+        }
+        System.out.printf("-------------------------------------------------------------------------%n");
+    }
+
+    public static void getPayment() {
         System.out.printf("-------------------------------------------------------------------------%n");
         System.out.printf("                       TU LINH GROCERY MART      %n");
         System.out.printf("                           SHOPPING BILL        %n");
@@ -45,7 +61,6 @@ public class CartManager {
         System.out.printf("-------------------------------------------------------------------------%n");
         System.out.printf("| %-20s | %-10s | %-7s | %-10s | %-10s |%n", "PRODUCT", "PRICE/UNIT", "AMOUNT", "DISCOUNT", "PRICE");
         System.out.printf("-------------------------------------------------------------------------%n");
-
         for (Product p : listCart
         ) {
             if (p instanceof Meat || p instanceof Vegetable) {
